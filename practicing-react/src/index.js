@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client'
 // import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
 import {Button} from './Button'
+import {TaskCard} from './Task'
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 
 root.render(<>
-    <Button text="Login"/>
+    {/* <Button text="Login"/>
     <Button text="Click me"/>
     <Button text="Pay"/>
     <Button text="Bonjour!"/>
-    <Button text="" name="Mario"/>
+    <Button text="" name="Mario"/> */}
+    <TaskCard ready={true}/>
     {/* <Greeting/> */}
     {/* <UserCard
     name="Joe Vasquez"
