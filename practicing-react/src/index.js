@@ -1,14 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {Greeting, UserCard} from './Greeting'
+// import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
-
+import {Button} from './Button'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 
 root.render(<>
-    <Greeting/>
-    <UserCard
+    <Button text="Login"/>
+    <Button text="Click me"/>
+    <Button text="Pay"/>
+    <Button text="Bonjour!"/>
+    <Button text="" name="Mario"/>
+    {/* <Greeting/> */}
+    {/* <UserCard
     name="Joe Vasquez"
     amount={3000}
     married={true}
@@ -23,7 +28,7 @@ root.render(<>
     points={[24,45,44.33]}
     address={{street: "423 Main Street", city:"Colorado"}}
     greet = {function () {alert('Bye')}}
-    />
+    /> */}
     {/* <Product/> */}
 </>
 )
