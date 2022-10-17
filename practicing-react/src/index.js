@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
-// import {Button} from './Button'
+import {Button} from './Button'
 import {TaskCard} from './Task'
 import {Saludar} from './Saludar'
 
@@ -10,8 +10,13 @@ import {Saludar} from './Saludar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
+const handleChange = (e) => {
+    console.log(e.target.value);
+}
 
-root.render(<>
+
+root.render(
+    <>
     {/* <Button text="Login"/>
     <Button text="Click me"/>
     <Button text="Pay"/>
@@ -19,6 +24,15 @@ root.render(<>
     <Button text="" name="Mario"/> */}
     <TaskCard ready={true}/>
     <Saludar/>
+    <Button text="Saludar"/>
+    <input id="hola" onChange={handleChange}/>
+    <form onSubmit={(e)=> {
+        e.preventDefault()
+        alert("send")
+    }}>
+        <h1>Suscribe user</h1>
+        <button>Send</button>
+    </form>
     {/* <Greeting/> */}
     {/* <UserCard
     name="Joe Vasquez"
@@ -37,5 +51,5 @@ root.render(<>
     greet = {function () {alert('Bye')}}
     /> */}
     {/* <Product/> */}
-</>
+    </>
 )

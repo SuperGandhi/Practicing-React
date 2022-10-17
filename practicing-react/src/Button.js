@@ -5,7 +5,10 @@ export function Button({text, name}){
 
     // if(!text) console.error('Just text!');
 
-    return <button>
+    // events --> eventos --> like onclick,onChange
+    return <button onClick={function (){
+        console.log("Hi World");
+    }}>
         {text} - {name}
     </button>
 }
