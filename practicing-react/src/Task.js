@@ -19,7 +19,9 @@ export function TaskCard({ready}){
     return(
         <div className="card">
             <h1>My firts task</h1>
-            <span className={ready ? 'bg-green' : 'bg-red'}>
+            <span className
+            
+            ={ready ? 'bg-green' : 'bg-red'}>
                 {
                     ready ? "Task completed" : "Task not finished yet"
                 }

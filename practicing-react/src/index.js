@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
-import {Button} from './Button'
+// import {Button} from './Button'
 import {TaskCard} from './Task'
-
+import {Saludar} from './Saludar'
 
 
 
@@ -18,6 +18,7 @@ root.render(<>
     <Button text="Bonjour!"/>
     <Button text="" name="Mario"/> */}
     <TaskCard ready={true}/>
+    <Saludar/>
     {/* <Greeting/> */}
     {/* <UserCard
     name="Joe Vasquez"
