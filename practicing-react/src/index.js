@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ReactDOM from 'react-dom/client'
 // import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
 // import {Button} from './Button'
 // import {TaskCard} from './Task'
 // import {Saludar} from './Saludar'
-import Posts from './Posts'
+// import Posts from './Posts'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -15,56 +15,93 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 // }
 
 
-const users = [
-    {
-        id:1,
-        name: 'Ryan stop',
-        image: "https://robohash.org/user1"
-    },
-    {
-        id:2,
-        name: 'Remi Galliard',
-        image: "https://robohash.org/user2"
-    },
-    {
-        id:3,
-        name: 'Nancy Low',
-        image: "https://robohash.org/user3"
-    },
-    {
-        id:4,
-        name: 'Topless three',
-        image: "https://robohash.org/user4"
-    },
-    {
-        id:5,
-        name: 'Torpedo Two',
-        image: "https://robohash.org/user5"
-    },
-    {
-        id:6,
-        name: 'Richix Lo',
-        image: "https://robohash.org/user6"
-    },
-    {
-        id:7,
-        name: 'Marco Low',
-        image: "https://robohash.org/user7"
-    },
+// const users = [
+//     {
+//         id:1,
+//         name: 'Ryan stop',
+//         image: "https://robohash.org/user1"
+//     },
+//     {
+//         id:2,
+//         name: 'Remi Galliard',
+//         image: "https://robohash.org/user2"
+//     },
+//     {
+//         id:3,
+//         name: 'Nancy Low',
+//         image: "https://robohash.org/user3"
+//     },
+//     {
+//         id:4,
+//         name: 'Topless three',
+//         image: "https://robohash.org/user4"
+//     },
+//     {
+//         id:5,
+//         name: 'Torpedo Two',
+//         image: "https://robohash.org/user5"
+//     },
+//     {
+//         id:6,
+//         name: 'Richix Lo',
+//         image: "https://robohash.org/user6"
+//     },
+//     {
+//         id:7,
+//         name: 'Marco Low',
+//         image: "https://robohash.org/user7"
+//     },
 
-]
+// ]
+
+
+function Counter(){
+
+    // const [counter,setCounter] = useState(0)
+
+    const [message, setMessage] = useState('')
+    return(
+        // <div>
+        //     <h1>Counter: {counter}</h1>
+        //         <button onClick={() => {
+        //             setCounter(counter+1)
+        //         }}>
+        //             Add
+        //         </button>
+        //         <button onClick={() => {
+        //             setCounter(counter-1)
+        //         }}>
+        //             Rest
+        //         </button>
+        //         <button style={{padding:10}}onClick={() => {
+        //             setCounter(0)
+        //         }}>
+        //         </button>
+        // </div>
+        <div>
+            <input onChange={e => setMessage(e.target.value)} />
+            <button onClick={() => {
+                alert('The message is: ' + message)
+            }}>
+                Save
+            </button>
+        </div>
+    )
+}
+
 
 root.render(
     <>
-    <Posts/>
-    {
+    <Counter/>
+    {/* <Posts/> */}
+    {/* {
         users.map((user,i) => {
             return <h1 key={i}>
                     {user.name}
                         <img src={user.image} alt="images" />
                     </h1>
         })
-    }
+    } */}
     {/* <Button text="Login"/>
     <Button text="Click me"/>
     <Button text="Pay"/>
