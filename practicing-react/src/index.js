@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 // import {Greeting, UserCard} from './Greeting'
 // import Product from './Product'
@@ -57,27 +57,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 function Counter(){
 
-    // const [counter,setCounter] = useState(0)
-
+    const [counter,setCounter] = useState(0)
     const [message, setMessage] = useState('')
+
+
+    useEffect(() => {
+        console.log('render');
+    }, [])
+
+
+
     return(
-        // <div>
-        //     <h1>Counter: {counter}</h1>
-        //         <button onClick={() => {
-        //             setCounter(counter+1)
-        //         }}>
-        //             Add
-        //         </button>
-        //         <button onClick={() => {
-        //             setCounter(counter-1)
-        //         }}>
-        //             Rest
-        //         </button>
-        //         <button style={{padding:10}}onClick={() => {
-        //             setCounter(0)
-        //         }}>
-        //         </button>
-        // </div>
+        <>
         <div>
             <input onChange={e => setMessage(e.target.value)} />
             <button onClick={() => {
@@ -86,6 +77,24 @@ function Counter(){
                 Save
             </button>
         </div>
+        <div>
+            <h1>Counter: {counter}</h1>
+                <button onClick={() => {
+                    setCounter(counter+1)
+                }}>
+                    Add
+                </button>
+                <button onClick={() => {
+                    setCounter(counter-1)
+                }}>
+                    Rest
+                </button>
+                <button style={{padding:10}}onClick={() => {
+                    setCounter(0)
+                }}>
+                </button>
+        </div>
+    </>
     )
 }
 
