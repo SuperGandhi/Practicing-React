@@ -15,9 +15,56 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 // }
 
 
+const users = [
+    {
+        id:1,
+        name: 'Ryan stop',
+        image: "https://robohash.org/user1"
+    },
+    {
+        id:2,
+        name: 'Remi Galliard',
+        image: "https://robohash.org/user2"
+    },
+    {
+        id:3,
+        name: 'Nancy Low',
+        image: "https://robohash.org/user3"
+    },
+    {
+        id:4,
+        name: 'Topless three',
+        image: "https://robohash.org/user4"
+    },
+    {
+        id:5,
+        name: 'Torpedo Two',
+        image: "https://robohash.org/user5"
+    },
+    {
+        id:6,
+        name: 'Richix Lo',
+        image: "https://robohash.org/user6"
+    },
+    {
+        id:7,
+        name: 'Marco Low',
+        image: "https://robohash.org/user7"
+    },
+
+]
+
 root.render(
     <>
     <Posts/>
+    {
+        users.map((user,i) => {
+            return <h1 key={i}>
+                    {user.name}
+                        <img src={user.image} alt="images" />
+                    </h1>
+        })
+    }
     {/* <Button text="Login"/>
     <Button text="Click me"/>
     <Button text="Pay"/>
